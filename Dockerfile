@@ -4,7 +4,6 @@ ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 WORKDIR $CATALINA_HOME
-
 ADD https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.90/bin/apache-tomcat-8.5.90.tar.gz .
 RUN tar -xvzf apache-tomcat-8.5.90.tar.gz
 RUN mv apache-tomcat-8.5.90/* /usr/local/tomcat
